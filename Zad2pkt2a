@@ -1,0 +1,24 @@
+using System;
+
+namespace Zad2a
+{
+    class Program
+    {
+            static void Main(string[] args)
+            {
+                int liczba, silnia = 1;
+                Console.WriteLine("Podaj liczbę: ");
+                liczba = int.Parse(Console.ReadLine());
+
+                for (int i = 1; i <= liczba; i++)
+
+                    silnia = silnia * i;
+
+                Console.WriteLine("Silnia z liczby " + liczba + " wynosi " + silnia);
+
+
+                Console.ReadKey();
+            }
+        
+    }
+}
