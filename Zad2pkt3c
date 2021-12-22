@@ -1,0 +1,57 @@
+using System;
+
+namespace Zad3c
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, c, dodawanie, odejmowanie, mnozenie, dzielenie, warunek;
+            Console.WriteLine("Program dodaje, odejmuje i mnoży dwie dowolne liczby");
+            Console.WriteLine("Podaj liczbę a");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj liczbę b");
+            b = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Jeśli chcesz znać wynik dodawania wpisz 1, jeśli chcesz wynik odejmowania wpisz 2, wynik mnożenia wpisz 3, wynik dzielenia wpisz 4");
+            c = int.Parse(Console.ReadLine());
+
+            odejmowanie = a - b;
+            dodawanie = a + b;
+            mnozenie = a * b;
+            warunek = c;
+
+            switch (warunek)
+            {
+                case 1:
+                    {
+                        Console.WriteLine("Wynik dodawania liczb " + a + " i " + b + " wynosi " + dodawanie);
+                    }
+                    break;
+                case 2:
+                    {
+                        Console.WriteLine("Wynik odejmowania " + a + " - " + b + " wynosi " + odejmowanie);
+                    }
+                    break;
+                case 3:
+                    {
+                        Console.WriteLine("Wynik mnożena liczb " + a + " i " + b + " wynosi " + mnozenie);
+                    }
+                    break;
+                case 4:
+                    {
+                        try
+                        {
+                            dzielenie = a / b;
+                            Console.WriteLine("Wynik dzielenia liczby " + a + " przez " + b + " wynosi " + dzielenie);
+                        }
+                        catch (DivideByZeroException ex)
+                        {
+                            Console.WriteLine("Nie można dzielić przez 0", ex);
+                        }
+                    }
+                    break;
+            }   
+        }
+    }
+}
